@@ -27,7 +27,7 @@ function App() {
       <div className="mx-auto">
         <h1 className="text-5xl font-bold text-center my-8">Film Finder App</h1>
         <div className="form-control">
-          <div className="relative w-1/2 mx-auto">
+          <div className="relative w-3/4 md:w-1/2 mx-auto">
             <form onSubmit={handleSubmit}>
             <input
               type="text"
@@ -38,7 +38,7 @@ function App() {
             />
             <button
               type="submit"
-              className="absolute top-0 right-0 rounded-none w-36 btn btn-lg"
+              className="absolute top-0 right-0 rounded-none w-28 md:w-36 btn btn-lg"
               onClick={() => searchMovies(searchTerm)}
             >
               go
@@ -50,7 +50,7 @@ function App() {
       </div>
       <div className="container max-w-7xl mx-auto my-10 px-6 text-white-900 md:px-0">
         {movies?.length > 0 ? (
-          <div className="grid grid-cols-4 grid-flow-row gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-4 grid-flow-row gap-4">
             {movies.map((movie) => (
               <MovieCard movie={movie} key={movie.imdbID}/>
             ))}
